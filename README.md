@@ -1,4 +1,14 @@
-The my mood an application who checks what is mood of person today.
+My mood mobile application.
+
+This application allows checking mood. The user needs to select the answer of questions and in the end able to see the result. 
+
+Please find the application widget tree:
+
+Application is created of a map, list and two methods. 
+The map is a collection of questions and possible answers based on question.
+List of selected answers.
+One method adds the selected answer to the list and another one resets the quiz.
+ 
 
 
 

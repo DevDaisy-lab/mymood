@@ -17,15 +17,50 @@ class Quiz extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Question(questions[questionIndex]['questionText']),
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: <Widget>[
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: [
+                    Center(
+                      child: Row(
+                        children: <Widget>[
+                          Column(
+                            children: <Widget>[
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Center(
+                                  child: Container(
+                                    child: Row(
+                                      children: <Widget>[
+                                        Question(questions[questionIndex]['questionText']),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
 
-        ...(questions[questionIndex]['answers'] as List<Map<String, Object>>)
-        .map((answer){
-          return Answer(() => answerQuestion(answer['value']), answer['text']);
-        }).toList(),
-      ],
+                    ...(questions[questionIndex]['answers'] as List<Map<String, Object>>)
+                    .map((answer){
+                      return Answer(() => answerQuestion(answer['value']), answer['text']);
+                    }).toList(),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
