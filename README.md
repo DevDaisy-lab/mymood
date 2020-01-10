@@ -5,7 +5,7 @@ This application allows to check mood. The user needs to select the answer of qu
 
 Application is created of **a widget tree**, **a map**, **list** and **two methods:**
 
-- A widget tree:
+- **A widget tree:**
 
 
 
